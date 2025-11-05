@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# 🏨 Sistema de Reservas para Hoteles
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación web desarrollada con **React**, **Vite** y **TailwindCSS**, diseñada para gestionar reservas en hoteles de forma moderna y eficiente.  
+Permite mostrar habitaciones con galerías de imágenes, realizar reservas y confirmar estancias con una interfaz simple e intuitiva.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologías utilizadas
 
-### `npm start`
+| Tecnología | Descripción |
+|-------------|--------------|
+| ⚛️ **React** | Librería principal para la creación de interfaces interactivas. |
+| ⚡ **Vite** | Herramienta de desarrollo ultrarrápida. |
+| 🎨 **TailwindCSS** | Framework CSS para diseño moderno y responsivo. |
+| 🧠 **JavaScript (ES6+)** | Lenguaje base del proyecto. |
+| 🌐 **HTML5 / CSS3** | Estructura y estilo del sitio. |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⚙️ Instalación y ejecución local
 
-### `npm test`
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/Joludime/sistema-reservas-hotel.git
 
-### `npm run build`
+# 2. Entrar en la carpeta del frontend
+cd sistema-reservas-hotel/frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 3. Instalar dependencias
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 4. Ejecutar el servidor de desarrollo
+npm run dev
+Luego abre tu navegador y entra a:
+👉 http://localhost:5173
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🧩 Estructura del proyecto
 
-### `npm run eject`
+sistema-reservas-hotel/
+│
+├── frontend/
+│   ├── public/
+│   │   └── images/                  # Imágenes de las habitaciones
+│   ├── src/
+│   │   ├── components/              # Componentes reutilizables (Navbar, Modales, etc.)
+│   │   ├── pages/                   # Páginas principales del sitio
+│   │   ├── data/                    # Datos estáticos (habitaciones)
+│   │   ├── App.jsx                  # Componente raíz
+│   │   └── main.jsx                 # Punto de entrada
+│   ├── package.json
+│   ├── tailwind.config.js
+│   └── vite.config.js
+│
+├── README.md
+└── .gitignore
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🏡 Características principales
+✅ Visualización de habitaciones con galerías de imágenes.
+✅ Formulario para registrar reservas.
+✅ Modales de confirmación con interfaz clara.
+✅ Diseño adaptable a dispositivos móviles.
+✅ Estructura modular, fácil de mantener y escalar.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🖼️ Capturas de pantalla (opcional)
+![Inicio](frontend/public/images/demo/inicio.png)
+![Galería](frontend/public/images/demo/galeria.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🌍 Próximas mejoras
+Conexión con backend para guardar reservas reales.
+Panel de administración para gestión de habitaciones.
+Integración con base de datos (Firebase o MongoDB).
+Despliegue online (Netlify / Vercel).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+👨‍💻 Autor
+José L. Díaz (Joludime)
+📍 Mérida, Yucatán, México
+🔗 GitHub: Joludime
 
-## Learn More
+🪶 Licencia
+Este proyecto está bajo la licencia MIT.
+Puedes usarlo, modificarlo o distribuirlo libremente con fines personales o educativos.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+✨ Desarrollado con pasión por José L. Díaz.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
