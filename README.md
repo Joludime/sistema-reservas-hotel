@@ -1,92 +1,204 @@
 # 🏨 Sistema de Reservas para Hoteles
 
-Este proyecto es una aplicación web desarrollada con **React**, **Vite** y **TailwindCSS**, diseñada para gestionar reservas en hoteles de forma moderna y eficiente.  
-Permite mostrar habitaciones con galerías de imágenes, realizar reservas y confirmar estancias con una interfaz simple e intuitiva.
+Sistema web desarrollado con **React** y **TailwindCSS** para gestionar reservas de hotel con interfaz moderna e intuitiva.
+
+## ✨ Características Implementadas
+
+- ✅ **Precio único:** Todas las habitaciones a **$500 MXN por noche**
+- ✅ **Estancia mínima:** Se requieren al menos **2 noches** para realizar una reserva
+- ✅ 4 tipos de habitaciones disponibles (Individual, Doble, Suite Familiar, Suite de Lujo)
+- ✅ Galería de imágenes para cada habitación
+- ✅ Formulario de reservas con validación
+- ✅ Cálculo automático del total según las noches
+- ✅ Gestión de reservas (crear y cancelar)
+- ✅ Diseño responsivo para móviles y tablets
+- ✅ Navegación con React Router
 
 ---
 
-## 🚀 Tecnologías utilizadas
+## 🚀 Tecnologías Utilizadas
 
 | Tecnología | Descripción |
-|-------------|--------------|
-| ⚛️ **React** | Librería principal para la creación de interfaces interactivas. |
-| ⚡ **Vite** | Herramienta de desarrollo ultrarrápida. |
-| 🎨 **TailwindCSS** | Framework CSS para diseño moderno y responsivo. |
-| 🧠 **JavaScript (ES6+)** | Lenguaje base del proyecto. |
-| 🌐 **HTML5 / CSS3** | Estructura y estilo del sitio. |
+|-------------|-------------|
+| ⚛️ **React** | Librería para interfaces interactivas |
+| ⚡ **Vite/Create React App** | Herramienta de desarrollo |
+| 🎨 **TailwindCSS** | Framework CSS moderno |
+| 🧭 **React Router** | Navegación entre páginas |
+| 💾 **LocalStorage** | Almacenamiento de reservas |
 
 ---
 
-## ⚙️ Instalación y ejecución local
-
-Sigue estos pasos para ejecutar el proyecto en tu entorno local:
+## ⚙️ Instalación y Ejecución Local
 
 ```bash
 # 1. Clonar el repositorio
 git clone https://github.com/Joludime/sistema-reservas-hotel.git
 
-# 2. Entrar en la carpeta del frontend
-cd sistema-reservas-hotel/frontend
+# 2. Entrar a la carpeta del proyecto
+cd sistema-reservas-hotel
 
 # 3. Instalar dependencias
 npm install
 
-# 4. Ejecutar el servidor de desarrollo
-npm run dev
-Luego abre tu navegador y entra a:
-👉 http://localhost:5173
+# 4. Ejecutar en modo desarrollo
+npm start
+```
 
-🧩 Estructura del proyecto
+Abre tu navegador en: 👉 **http://localhost:3000**
 
+---
+
+## 🏗️ Estructura del Proyecto
+
+```
 sistema-reservas-hotel/
 │
-├── frontend/
-│   ├── public/
-│   │   └── images/                  # Imágenes de las habitaciones
-│   ├── src/
-│   │   ├── components/              # Componentes reutilizables (Navbar, Modales, etc.)
-│   │   ├── pages/                   # Páginas principales del sitio
-│   │   ├── data/                    # Datos estáticos (habitaciones)
-│   │   ├── App.jsx                  # Componente raíz
-│   │   └── main.jsx                 # Punto de entrada
-│   ├── package.json
-│   ├── tailwind.config.js
-│   └── vite.config.js
+├── src/
+│   ├── components/          # Componentes reutilizables
+│   │   ├── Navbar.js       # Barra de navegación
+│   │   ├── RoomCard.js     # Tarjeta de habitación
+│   │   └── ReservationModal.js  # Modal de reserva
+│   │
+│   ├── pages/              # Páginas principales
+│   │   ├── Home.js         # Página de inicio
+│   │   ├── Rooms.js        # Catálogo de habitaciones
+│   │   └── Reservations.js # Gestión de reservas
+│   │
+│   ├── data/
+│   │   └── rooms.js        # Datos de habitaciones
+│   │
+│   ├── App.js              # Componente principal con rutas
+│   └── index.js            # Punto de entrada
 │
-├── README.md
-└── .gitignore
+├── public/
+│   └── images/             # Imágenes de habitaciones
+│
+├── package.json
+├── tailwind.config.js
+└── README.md
+```
 
-🏡 Características principales
-✅ Visualización de habitaciones con galerías de imágenes.
-✅ Formulario para registrar reservas.
-✅ Modales de confirmación con interfaz clara.
-✅ Diseño adaptable a dispositivos móviles.
-✅ Estructura modular, fácil de mantener y escalar.
+---
 
-🖼️ Capturas de pantalla (opcional)
-![Inicio](frontend/public/images/demo/inicio.png)
-![Galería](frontend/public/images/demo/galeria.png)
+## 💰 Configuración de Precios
 
-🌍 Próximas mejoras
-Conexión con backend para guardar reservas reales.
-Panel de administración para gestión de habitaciones.
-Integración con base de datos (Firebase o MongoDB).
-Despliegue online (Netlify / Vercel).
+El sistema está configurado con:
+- **Precio por noche:** $500 MXN (todas las habitaciones)
+- **Estancia mínima:** 2 noches
 
-👨‍💻 Autor
-José L. Díaz (Joludime)
-📍 Mérida, Yucatán, México
-🔗 GitHub: Joludime
+Estos valores están definidos en `src/data/rooms.js`:
 
-🪶 Licencia
-Este proyecto está bajo la licencia MIT.
-Puedes usarlo, modificarlo o distribuirlo libremente con fines personales o educativos.
+```javascript
+export const MIN_NIGHTS = 2;
+export const PRICE_PER_NIGHT = 500;
+```
 
-✨ Desarrollado con pasión por José L. Díaz.
+Para modificarlos, edita estos valores en el archivo mencionado.
 
+---
 
+## 🖥️ Páginas del Sistema
 
+### 1. **Inicio** (`/`)
+- Información general del hotel
+- Destacado de precio y políticas
+- Botón para ver habitaciones
 
+### 2. **Habitaciones** (`/rooms`)
+- Catálogo de 4 tipos de habitaciones
+- Galería de imágenes navegable
+- Detalles de amenidades
+- Botón de reserva
 
+### 3. **Mis Reservas** (`/reservations`)
+- Lista de todas las reservas
+- Detalles completos de cada reserva
+- Opción para cancelar reservas
 
+---
 
+## 📋 Proceso de Reserva
+
+1. Usuario navega al catálogo de habitaciones
+2. Selecciona la habitación deseada
+3. Completa el formulario con:
+   - Nombre completo
+   - Email
+   - Teléfono
+   - Fechas de entrada y salida
+4. El sistema valida:
+   - Que todos los campos estén completos
+   - Que la estancia sea de **al menos 2 noches**
+5. Se muestra el cálculo del total
+6. Al confirmar, la reserva se guarda localmente
+7. Redirección a la página de reservas
+
+---
+
+## 🎨 Habitaciones Disponibles
+
+| Habitación | Capacidad | Precio/Noche |
+|------------|-----------|--------------|
+| Individual | 1 persona | $500 MXN |
+| Doble | 2 personas | $500 MXN |
+| Suite Familiar | 4 personas | $500 MXN |
+| Suite de Lujo | 2 personas | $500 MXN |
+
+---
+
+## 🌐 Despliegue
+
+Para desplegar el proyecto en producción:
+
+### Opción 1: Netlify
+```bash
+npm run build
+# Arrastra la carpeta 'build' a Netlify
+```
+
+### Opción 2: Vercel
+```bash
+npm install -g vercel
+vercel
+```
+
+### Opción 3: GitHub Pages
+```bash
+npm install gh-pages --save-dev
+# Agregar en package.json:
+# "homepage": "https://Joludime.github.io/sistema-reservas-hotel"
+npm run build
+npm run deploy
+```
+
+---
+
+## 🔄 Próximas Mejoras
+
+- [ ] Backend con Node.js/Express
+- [ ] Base de datos (MongoDB/Firebase)
+- [ ] Panel de administración
+- [ ] Integración con pagos
+- [ ] Sistema de autenticación
+- [ ] Imágenes reales de habitaciones
+- [ ] Disponibilidad en tiempo real
+- [ ] Notificaciones por email
+
+---
+
+## 👨‍💻 Autor
+
+**José L. Díaz** (Joludime)  
+📍 Mérida, Yucatán, México  
+🔗 [GitHub](https://github.com/Joludime)
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT.  
+Puedes usarlo, modificarlo y distribuirlo libremente.
+
+---
+
+✨ **Desarrollado con pasión por José L. Díaz**
